@@ -1,0 +1,23 @@
+﻿<Window x:Class="Presenter.video"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presenter"
+        ResizeMode="NoResize"
+
+        mc:Ignorable="d"
+        Title="video" Height="270" Width="480" Deactivated="Window_Deactivated_1" Topmost="True" Cursor="None" ForceCursor="True" Closing="Window_Closing" PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDown="mediaElement_MouseDown"/>
+            <Label x:Name="label" Content="Drag to a desired screeen, double click to toggle fullscreen" HorizontalAlignment="Center" Margin="0,0,0,0" FontSize="13" FontWeight="Bold" VerticalAlignment="Center">
+            <Label.Effect>
+                <BlurEffect Radius="5"/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label1" Content="Drag to a desired screeen, double click to toggle fullscreen" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontSize="13" FontWeight="Bold" VerticalAlignment="Center"/>
+
+
+
+    </Grid>
+</Window>

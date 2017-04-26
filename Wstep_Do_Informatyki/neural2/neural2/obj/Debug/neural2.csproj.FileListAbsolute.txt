@@ -1,0 +1,6 @@
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\neural2\neural2\bin\Debug\neural2.exe.config
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\neural2\neural2\bin\Debug\neural2.exe
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\neural2\neural2\bin\Debug\neural2.pdb
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\neural2\neural2\obj\Debug\neural2.csprojResolveAssemblyReference.cache
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\neural2\neural2\obj\Debug\neural2.exe
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\neural2\neural2\obj\Debug\neural2.pdb

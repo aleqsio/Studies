@@ -1,0 +1,6 @@
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\cakecsharp\cakecsharp\bin\Debug\cakecsharp.exe.config
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\cakecsharp\cakecsharp\bin\Debug\cakecsharp.exe
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\cakecsharp\cakecsharp\bin\Debug\cakecsharp.pdb
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\cakecsharp\cakecsharp\obj\Debug\cakecsharp.csprojResolveAssemblyReference.cache
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\cakecsharp\cakecsharp\obj\Debug\cakecsharp.exe
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\cakecsharp\cakecsharp\obj\Debug\cakecsharp.pdb

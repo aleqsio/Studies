@@ -1,0 +1,6 @@
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\pierwiastek-HACKERRANK\pierwiastek-HACKERRANK\bin\Debug\pierwiastek-HACKERRANK.exe.config
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\pierwiastek-HACKERRANK\pierwiastek-HACKERRANK\bin\Debug\pierwiastek-HACKERRANK.exe
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\pierwiastek-HACKERRANK\pierwiastek-HACKERRANK\bin\Debug\pierwiastek-HACKERRANK.pdb
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\pierwiastek-HACKERRANK\pierwiastek-HACKERRANK\obj\Debug\pierwiastek-HACKERRANK.csprojResolveAssemblyReference.cache
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\pierwiastek-HACKERRANK\pierwiastek-HACKERRANK\obj\Debug\pierwiastek-HACKERRANK.exe
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\pierwiastek-HACKERRANK\pierwiastek-HACKERRANK\obj\Debug\pierwiastek-HACKERRANK.pdb

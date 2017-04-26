@@ -1,0 +1,16 @@
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\bin\Debug\Presenter.exe.config
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\bin\Debug\Presenter.exe
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\bin\Debug\Presenter.pdb
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\Presenter.csprojResolveAssemblyReference.cache
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\MainWindow.g.cs
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\App.g.cs
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\Presenter_MarkupCompile.cache
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\Presenter_MarkupCompile.lref
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\MainWindow.baml
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\Presenter.g.resources
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\Presenter.Properties.Resources.resources
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\Presenter.csproj.GenerateResource.Cache
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\Presenter.exe
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\Presenter.pdb
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\video.g.cs
+C:\Users\User\Alek dokumenty\git_bitbucket\wdi_projekty_2\Presenter\Presenter\obj\Debug\video.baml
