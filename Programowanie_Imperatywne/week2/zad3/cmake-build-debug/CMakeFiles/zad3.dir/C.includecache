@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/week2/zad3/main.c
+stdio.h
+-
+stdlib.h
+-
+
