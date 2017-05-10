@@ -7,11 +7,8 @@ int max(int* arr,int i,int end)
     arr[i] = i%2 ? arr[i/2]+arr[(i+1)/2] :  arr[i/2];
     if(i==end)
         return arr[i];
-    else
-    {
         int next=max(arr,i+1,end);
         return next>arr[i] ? next : arr[i];
-    }
 }
 int main() {
     int n;
