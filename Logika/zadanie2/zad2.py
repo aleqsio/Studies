@@ -64,15 +64,39 @@ print(str(churchtobool(_or(true)(true)))); print(str(churchtobool(_or(false)(tru
 _not = lambda a: a(false)(true)
 print(str(churchtobool(_not(true)))); print(str(churchtobool(_not(false))));
 
-_if = lambda s: lambda a:lambda b: s(a)(b)
+
+
+_if = lambda s: lambda a: lambda b: s(a)(b)
+
+print("always true")
 print(_if(true)("Yes")("No"))
 
-_iszero = (lambda f: (f(lambda x: false))(f(lambda x: true)))
-print(_if(_iszero(n1))("Yes")("No"))
+print("1==0, 0==0")
+_iszero = lambda f: f(lambda x: false)(true)
 
+print(_if(_iszero(n1))("Yes")("No"))
+print(_if(_iszero(n0))("Yes")("No"))
+
+_lessoreq = lambda a: lambda b: _iszero(sub(a)(b))
+
+print("5 lower then 3")
+print(_if(_lessoreq(n5)(n3))("Yes")("No"))
+
+_mod2 = lambda f: lambda a: lambda b: _if(_lessoreq(b)(a))(lambda e: f(f)(sub(a)(b))(b)(e))(a)
+_mod = lambda a: lambda b: _mod2(_mod2)(a)(b)
+print(str(churchtoint(_mod(n5)(n2))))
 #PROGRAM ZWRACA SUMĘ ELEMENTÓW
 def sum(n):
-    print(str(churchtoint(n)))
-    x=(((lambda z=n: add(sum(pred(z)))(z))))
-    return _if(_iszero(n))(n0)(x)(n)
-print(str(churchtoint(sum(multiply(n5)(n2)))))
+    #print(str(churchtoint(n)))
+    return (((_if(_iszero(n)))(n1)((((lambda z=n: add(sum(pred(z)))(z)))))))(n)
+print(str(churchtoint(sum(multiply(n2)(n5)))))
+
+
+
+#PROGRAM ZWRACA SUMĘ ELEMENTÓW PODZIELNYCH PRZEZ 5
+def sumdiv5(n):
+   print(str(churchtoint(n)))
+   return (_if(_iszero(n)))(n1)(lambda z=n: add(sumdiv5(pred(z)))((_if(_iszero(_mod(z)(n5)))(z)(n0))))(n)
+
+print(str(churchtoint(sumdiv5(multiply(n2)(n5)))))
+
