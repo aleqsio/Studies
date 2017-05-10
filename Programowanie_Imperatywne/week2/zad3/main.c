@@ -24,11 +24,13 @@ void read(struct matrix *m)
     }
     for (int i = 0; i < m->n; i++)
     {
+
             scanf("%lf", &m->AB[m->r][i]);
     }
 }
 double** create_two_dim_array(struct size s)
 {
+
     double** a = malloc(sizeof(double*)*s.y);
     for (int i = 0; i < s.x; i++)
     {
