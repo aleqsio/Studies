@@ -31,10 +31,10 @@ conj_elim_l (a,b) = a
 
 
 disj_intro_l :: A -> A :\/: B
-disj_intro_l a = Left a --to œrednio ma sens
+disj_intro_l a = Left a --to Å“rednio ma sens
 
 rozl_elim :: A :\/: B -> (A -> C) -> (B -> C) -> C 
-rozl_elim (Left a) a_wyn_c b_wyn_c = a_wyn_c(a) --pattern matching na podstawie tego który typ siedzi w either
+rozl_elim (Left a) a_wyn_c b_wyn_c = a_wyn_c(a) --pattern matching na podstawie tego ktÃ³ry typ siedzi w either
 rozl_elim (Right b) a_wyn_c b_wyn_c = b_wyn_c(b)
 
 
@@ -59,8 +59,8 @@ mycurry :: (A :/\: B -> C) -> A -> B -> C
 mycurry a_i_b_wyn_c a b = a_i_b_wyn_c((a,b))
 
 
-
 myuncurry :: (A -> B -> C) -> A :/\: B -> C
 myuncurry a_wyn_b_wyn_c (a,b) = a_wyn_b_wyn_c(a)(b)
+
 
 main = print $ "I can't believe that worked :o"
