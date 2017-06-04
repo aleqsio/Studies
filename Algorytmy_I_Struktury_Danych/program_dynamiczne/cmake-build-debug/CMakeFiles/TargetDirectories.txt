@@ -1,0 +1,3 @@
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Algorytmy_I_Struktury_Danych/program_dynamiczne/cmake-build-debug/CMakeFiles/program_dynamiczne.dir
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Algorytmy_I_Struktury_Danych/program_dynamiczne/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Algorytmy_I_Struktury_Danych/program_dynamiczne/cmake-build-debug/CMakeFiles/rebuild_cache.dir

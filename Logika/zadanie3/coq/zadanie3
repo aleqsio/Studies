@@ -1,0 +1,151 @@
+Section ZadanieOne.
+
+Variables A B C D : Prop. 
+
+Theorem impl_rozdz : (A -> B) -> (A -> C) -> A -> B -> C.
+Proof.
+intro I.
+intro J.
+intro K.
+intro L.
+apply J.
+apply K.
+Qed.
+
+Theorem impl_komp : (A -> B) -> (B -> C) -> A -> C.
+Proof.
+intro I.
+intro J.
+intro K.
+apply J.
+apply I.
+apply K.
+Qed.
+
+Theorem impl_perm : (A -> B -> C) -> B -> A -> C. 
+Proof.
+intro I.
+intro J.
+intro K.
+apply I.
+apply K.
+apply J.
+Qed.
+
+Theorem impl_conj : A -> B -> A /\ B. 
+Proof.
+intro I.
+intro J.
+split.
+apply I.
+apply J.
+Qed.
+
+Theorem conj_elim_l : A /\ B -> A. 
+Proof.
+intro I.
+elim I.
+intro J.
+intro K.
+apply J.
+Qed.
+
+Theorem disj_intro_l : A -> A \/ B.
+Proof.
+intro I.
+left.
+apply I.
+Qed.
+
+Theorem rozl_elim : A \/ B -> (A -> C) -> (B -> C) -> C. 
+Proof.
+intro I.
+intro J.
+intro K.
+elim I.
+apply J.
+apply K.
+Qed.
+
+Theorem diamencik : (A -> B) -> (A -> C) -> (B -> C -> D) -> A -> D.
+Proof.
+intro I.
+intro J.
+intro K.
+intro L.
+apply K.
+apply I.
+apply L.
+apply J.
+apply L.
+Qed.
+
+Theorem slaby_peirce : ((((A -> B) -> A) -> A) -> B) -> B.
+Proof.
+intro I.
+apply I.
+intro J.
+apply J.
+intro K.
+apply I.
+intro L.
+apply K.
+Qed.
+
+Theorem rozl_impl_rozdz : (A \/ B -> C) -> (A -> C) /\ (B -> C).
+Proof.
+intro I.
+split.
+intro J.
+apply I.
+left.
+apply J.
+intro J.
+apply I.
+right.
+apply J.
+Qed.
+ 
+Theorem rozl_impl_rozdz_odw : (A -> C) /\ (B -> C) -> A \/ B -> C.
+Proof.
+intro I.
+intro J.
+elim I.
+intro K.
+intro L.
+elim J.
+intro M.
+apply K.
+apply M.
+intro N.
+apply L.
+apply N.
+Qed.
+
+Theorem curry : (A /\ B -> C) -> A -> B -> C.
+Proof.
+intro I.
+intro J.
+intro K.
+apply I.
+split.
+apply J.
+apply K.
+Qed.
+
+Theorem uncurry : (A -> B -> C) -> A /\ B -> C.
+Proof.
+intro I.
+intro J.
+apply I.
+elim J.
+intro K.
+intro L.
+apply K.
+elim J.
+intro K.
+intro L.
+apply L.
+Qed.
+
+End ZadanieOne.

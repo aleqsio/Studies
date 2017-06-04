@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/lab5/main.c
+stdio.h
+-
+malloc.h
+-
+stdlib.h
+-
+time.h
+-
+math.h
+-
+
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/lab5/zad2.c
+
