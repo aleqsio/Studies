@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/kartk2/main.cpp
+iostream
+-
+stdio.h
+-
+malloc.h
+-
+stdlib.h
+-
+cstring
+-
+

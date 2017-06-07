@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab5.dir/main.c.obj"
-  "CMakeFiles/lab5.dir/zad2.c.obj"
   "lab5.pdb"
   "lab5.exe"
   "lab5.exe.manifest"

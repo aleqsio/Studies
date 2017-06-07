@@ -83,9 +83,6 @@
 		<Unit filename="C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/lab5/main.c">
 			<Option target="lab5"/>
 		</Unit>
-		<Unit filename="C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/lab5/zad2.c">
-			<Option target="lab5"/>
-		</Unit>
 		<Unit filename="C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/lab5/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -1,0 +1,3 @@
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/kartk2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/kartk2/cmake-build-debug/CMakeFiles/kartk2.dir
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Programowanie_Imperatywne/kartk2/cmake-build-debug/CMakeFiles/edit_cache.dir

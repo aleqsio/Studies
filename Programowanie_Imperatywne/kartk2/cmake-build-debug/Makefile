@@ -47,24 +47,13 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\lab5"
+CMAKE_SOURCE_DIR = "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\kartk2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\lab5\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\kartk2\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	"C:\Program Files\CMake\bin\cmake-gui.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -77,11 +66,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	"C:\Program Files\CMake\bin\cmake-gui.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\lab5\cmake-build-debug\CMakeFiles" "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\lab5\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\kartk2\cmake-build-debug\CMakeFiles" "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\kartk2\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\lab5\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\User\Alek dokumenty\Programowanie\Studies\Programowanie_Imperatywne\kartk2\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -110,44 +110,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab5
+# Target rules for targets named kartk2
 
 # Build rule for target.
-lab5: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 lab5
-.PHONY : lab5
+kartk2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 kartk2
+.PHONY : kartk2
 
 # fast build rule for target.
-lab5/fast:
-	$(MAKE) -f CMakeFiles\lab5.dir\build.make CMakeFiles/lab5.dir/build
-.PHONY : lab5/fast
+kartk2/fast:
+	$(MAKE) -f CMakeFiles\kartk2.dir\build.make CMakeFiles/kartk2.dir/build
+.PHONY : kartk2/fast
 
-main.obj: main.c.obj
+main.obj: main.cpp.obj
 
 .PHONY : main.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) -f CMakeFiles\lab5.dir\build.make CMakeFiles/lab5.dir/main.c.obj
-.PHONY : main.c.obj
+main.cpp.obj:
+	$(MAKE) -f CMakeFiles\kartk2.dir\build.make CMakeFiles/kartk2.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-main.i: main.c.i
+main.i: main.cpp.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles\lab5.dir\build.make CMakeFiles/lab5.dir/main.c.i
-.PHONY : main.c.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles\kartk2.dir\build.make CMakeFiles/kartk2.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-main.s: main.c.s
+main.s: main.cpp.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles\lab5.dir\build.make CMakeFiles/lab5.dir/main.c.s
-.PHONY : main.c.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles\kartk2.dir\build.make CMakeFiles/kartk2.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -155,9 +155,9 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... lab5
-	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... kartk2
+	@echo ... edit_cache
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
