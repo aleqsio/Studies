@@ -60,7 +60,7 @@ int main() {
     //for(int i=0;i<lw;i++)    printf("\npierwszy samochód danej marki:%s, liczba %d",cars2[i]->model,lenw[i]);
     //szukanie konkretnej marki
     int summator=0;
-    int beggining=0;
+    int beginning=0;
     int end=0;
     int ind=-1;
     while(end==0)       //unikamy interowania po cars korzystając z tablicy marek
@@ -68,12 +68,12 @@ int main() {
         ind++;
         if(!strcmp(cars2[ind]->brand,request))
         {
-             beggining=summator;
+             beginning=summator;
         }
         summator+=lenw[ind];
-        if(beggining) end=summator;
+        if(beginning) end=summator;
     }
     printf("\nLista samochodow marki %s:",request);
-    for(int i=beggining;i<end;i++)    printf("\n%s, %d, %s",cars[i].brand,cars[i].engine,cars[i].model);
+    for(int i=beginning;i<end;i++)    printf("\n%s, %d, %s",cars[i].brand,cars[i].engine,cars[i].model);
     return 0;
 }
