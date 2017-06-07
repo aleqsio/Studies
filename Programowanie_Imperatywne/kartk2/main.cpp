@@ -63,7 +63,7 @@ int main() {
     int beginning=0;
     int end=0;
     int ind=-1;
-    while(end==0)       //unikamy interowania po cars korzystając z tablicy marek
+    while(end==0)       //unikamy iterowania po cars korzystając z tablicy marek
     {
         ind++;
         if(!strcmp(cars2[ind]->brand,request))
