@@ -14,7 +14,7 @@ n2 = lambda f: lambda x:f(f(x))
 n3 = lambda f: lambda x:f(f(f(x)))
 n4 = lambda f: lambda x:f(f(f(f(x))))
 n5 = lambda f: lambda x:f(f(f(f(f(x)))))
-
+ 
 #wartosci logiczne
 true = lambda a:lambda b:a
 false = lambda a:lambda b:b
@@ -22,7 +22,7 @@ false = lambda a:lambda b:b
 #funkcja pomocnicza zamieniająca churcha na inta - dla sprawdzania wyników
 churchtoint = lambda ch: ch(lambda x:x+1)(0) #korzystamy z cechy że wywołanie liczebnika churcha jest tak
 #  naprawdę n krotnym zastosowaniem funkcji podanej w argumencie na zwracanych wartościach
-# podanie funkcji incremenent powoduje inkrementację na każdym stopniu zagnieżdzenia
+# podanie funkcji increment powoduje inkrementację na każdym stopniu zagnieżdzenia
 print(str(churchtoint(n0)))
 print(str(churchtoint(n5)))
 
@@ -40,6 +40,7 @@ print(str(churchtoint(base(n5)))) #zwraca 1
 
 succ = lambda a: lambda f: lambda x: f(a(f)(x)) #incrementuje
 print(str(churchtoint(succ(n5))))
+lambda a: lambda f: lambda x: f(a(f)(x)) #incrementuje
 
 pred = lambda a: lambda b: lambda x: a (lambda f: lambda g: g (f (b))) (lambda i:x) (lambda o:o)
 

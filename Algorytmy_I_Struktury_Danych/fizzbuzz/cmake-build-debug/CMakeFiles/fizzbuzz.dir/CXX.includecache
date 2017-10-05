@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/User/Alek dokumenty/Programowanie/Studies/Algorytmy_I_Struktury_Danych/fizzbuzz/main.cpp
+iostream
+-
+
