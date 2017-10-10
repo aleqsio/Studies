@@ -1,9 +1,8 @@
 package main;
-
 /**
  * Created by Aleksander on 09.10.2017.
  */
-public class Term {
+public class Term implements ITerm{
     public int hour;
     public int minute;
     public int duration;
@@ -27,9 +26,13 @@ public class Term {
     public boolean laterThan(Term t){
         return this.getMinuteTime() > t.getMinuteTime();
     }
-    public Term endTerm(Term endTerm){
+    public Term endTerm(Term endTerm) throws IllegalArgumentException{
         Term newTerm = new Term(this);
-        newTerm.duration=(endTerm.getMinuteTime()-this.getMinuteTime());
+        int newDuration = (endTerm.getMinuteTime()-this.getMinuteTime());
+                if(newDuration<0) {
+                    throw new IllegalArgumentException("End time can not precede the event");
+                }
+        newTerm.duration=newDuration;
         return newTerm;
     }
     public Term endTerm(){
@@ -37,11 +40,11 @@ public class Term {
         newTerm.setMinuteTime(this.getMinuteTime()+this.duration);
         return newTerm;
     }
-    public boolean equals(Object obj){
+
+    public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null) return false;
-        if (this.getClass() != obj.getClass()) return false;
-        return this.duration==((Term)obj).duration && this.getMinuteTime()==((Term)obj).getMinuteTime();
+        return this.getClass() == obj.getClass() && this.duration == ((Term) obj).duration && this.getMinuteTime() == ((Term) obj).getMinuteTime();
     }
     private int getMinuteTime(){
         return this.hour*60+this.minute;

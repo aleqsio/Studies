@@ -12,7 +12,5 @@ public enum Day {
     public Day nextDay(){
         return Day.values()[(this.ordinal()+1)%7];
     }
-    public Day prevDay(){
-        return Day.values()[(this.ordinal()+6)%7];
-    }
+    public Day prevDay(){  return Day.values()[(this.ordinal()+6)%7]; }
 }

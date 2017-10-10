@@ -44,6 +44,12 @@ public class DeanerySystemTest {
         Term t3=t1.endTerm(t2);
         assertEquals(t3.toString(),"12:30 [80]");
     }
+    @Test(expected = IllegalArgumentException.class)
+    public void endTermShouldThrowExceptionOnPrecedingEvent(){
+        Term t1=new Term(12,30);
+        Term t2=new Term(11,50);
+        Term t3=t1.endTerm(t2);
+    }
     @Test
     public void earlierThanShouldReturnTheCorrectValue(){
         Term t1=new Term(12,30);
@@ -70,5 +76,4 @@ public class DeanerySystemTest {
         Term t6=new Term(0,1);
         assertEquals(t5.laterThan(t6),false);
     }
-
 }
