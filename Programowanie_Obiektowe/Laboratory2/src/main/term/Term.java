@@ -1,4 +1,4 @@
-package main;
+package main.term;
 /**
  * Created by Aleksander on 09.10.2017.
  */
@@ -46,10 +46,10 @@ public class Term implements ITerm{
         if (obj == null) return false;
         return this.getClass() == obj.getClass() && this.duration == ((Term) obj).duration && this.getMinuteTime() == ((Term) obj).getMinuteTime();
     }
-    private int getMinuteTime(){
+    int getMinuteTime(){
         return this.hour*60+this.minute;
     }
-    private void setMinuteTime(int minuteTime){
+    void setMinuteTime(int minuteTime){
         this.minute=minuteTime%60;
         this.hour=minuteTime/60;
     }

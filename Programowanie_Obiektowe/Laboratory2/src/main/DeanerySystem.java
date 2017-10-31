@@ -1,5 +1,7 @@
 package main;
 
+import main.term.Term;
+
 public class DeanerySystem {
     public static void main(String[] args) {
         Term term1 = new Term(9,45);

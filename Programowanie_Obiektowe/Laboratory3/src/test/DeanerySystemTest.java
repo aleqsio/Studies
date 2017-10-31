@@ -1,10 +1,10 @@
 package test;
 
 import main.Day;
-import main.term.Term;
+import main.Term;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Aleksander on 09.10.2017.
