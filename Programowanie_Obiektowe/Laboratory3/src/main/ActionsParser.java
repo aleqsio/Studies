@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by Aleksander on 17.10.2017.
  */
 public class ActionsParser {
-    public static Action[] parse(String[] descriptions){
+    public static Action[] parse(String[] descriptions) throws IllegalArgumentException{
         ArrayList<Action> actions = new ArrayList<>();
         for (String desc:descriptions
              ) {
@@ -24,7 +24,7 @@ public class ActionsParser {
                     actions.add(Action.TIME_LATER);
                     break;
                 default:
-                    break;
+                   throw new IllegalArgumentException("Translation " + desc+" is incorrect");
             }
         }
         return actions.toArray(new Action[actions.size()]);

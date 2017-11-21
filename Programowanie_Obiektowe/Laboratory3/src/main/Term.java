@@ -3,7 +3,7 @@ package main;
 /**
  * Created by Aleksander on 09.10.2017.
  */
-public class Term implements ITerm{
+public class Term implements ITerm, Comparable<Term>{
     private int hour;
     private int minute;
     private int duration;
@@ -49,6 +49,11 @@ public class Term implements ITerm{
     public boolean laterThan(Term t){
         return this.getMinuteTime() > t.getMinuteTime();
     }
+    public int laterThanInAWeek(Term t){
+        if(this.getMinuteTime()+day.ordinal()*60*24 > t.getMinuteTime()+day.ordinal()*60*24) return 1;
+        if(this.getMinuteTime()+day.ordinal()*60*24 < t.getMinuteTime()+day.ordinal()*60*24) return -1;
+        return 0;
+    }
     public Term endTerm(Term endTerm) throws IllegalArgumentException{
         Term newTerm = new Term(this);
         int newDuration = (endTerm.getMinuteTime()-this.getMinuteTime());
@@ -58,6 +63,16 @@ public class Term implements ITerm{
         newTerm.duration=newDuration;
         return newTerm;
     }
+
+    @Override
+    public int hashCode() {
+        int result = hour;
+        result = 31 * result + minute;
+        result = 31 * result + duration;
+        result = 31 * result + (day != null ? day.hashCode() : 0);
+        return result;
+    }
+
     public Term endTerm(){
         Term newTerm = new Term(this);
         newTerm.setMinuteTime(this.getMinuteTime()+this.duration);
@@ -77,4 +92,8 @@ public class Term implements ITerm{
         this.hour=minuteTime/60;
     }
 
+    @Override
+    public int compareTo(Term o) {
+        return this.laterThanInAWeek(o);
+    }
 }

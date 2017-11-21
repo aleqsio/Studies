@@ -67,7 +67,7 @@ public class DeanerySystemTest {
     public void laterThanShouldReturnTheCorrectValue(){
         Term t1=new Term(12,30);
         Term t2=new Term(13,50);
-        assertEquals(t1.laterThan(t2),false);
+        assertEquals(false,t1.laterThan(t2));
         assertEquals(t2.laterThan(t1),true);
         Term t3=new Term(12,30);
         Term t4=new Term(12,30);

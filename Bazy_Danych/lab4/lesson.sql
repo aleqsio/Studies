@@ -36,6 +36,7 @@ and member.middleinitial='A'
 and member.lastname = 'Graff'
 
 use Northwind
+select * from Customers join Orders on Orders.CustomerID=Customers.CustomerID
 select ProductName,UnitPrice,CompanyName,Address,City 
 from Products join Suppliers on Suppliers.SupplierID = Products.SupplierID 
 where UnitPrice between 20 and 30
@@ -44,11 +45,23 @@ where UnitPrice between 20 and 30
 select ProductName, UnitsInStock,UnitsOnOrder 
 from Products join Suppliers on Products.SupplierID=Suppliers.SupplierID 
 where CompanyName = 'Tokyo Traders'
---HOMEWORK
-select distinct Customers.CompanyName,Customers.Phone 
-from Customers join Orders on Orders.CustomerID=Customers.CustomerID 
-where not year(OrderDate) = 1997 order by CompanyName
 
 select ProductName, UnitsInStock, CompanyName,Phone
 from Products join Suppliers on Products.SupplierID=Suppliers.SupplierID 
 where UnitsInStock = 0
+
+
+--HOMEWORK v1 (nie dzia³a)
+select distinct Customers.CompanyName,Customers.Phone 
+from Customers join Orders on Orders.CustomerID=Customers.CustomerID 
+where not year(OrderDate) = 1997 order by CompanyName
+
+
+
+--HOMEWORK v2 
+select distinct Customers.CompanyName,Customers.Phone from Customers 
+except select distinct Customers.CompanyName,Customers.Phone from Customers join Orders on Orders.CustomerID=Customers.CustomerID 
+where year(OrderDate) = 1997 order by CompanyName
+--HOMEWORK v3
+select customers.customerid,orderdate from Customers left outer join orders on Orders.Customerid=Customers.customerid and YEAR(orderdate)=1997 where orderdate=NULL
+

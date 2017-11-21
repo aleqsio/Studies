@@ -29,11 +29,11 @@ public interface ITimetable {
     /**
      * Add the given lesson to the timetable
      *
+     *
      * @param lesson
-    The added  lesson
-     @return True if the lesson was added
+    The added  lesson@return True if the lesson was added
      */
-    boolean put(Lesson lesson);
+    void put(Lesson lesson) throws IllegalArgumentException;
 
     /*************************************/
     /**
@@ -49,4 +49,5 @@ public interface ITimetable {
      * @return Object or null if the term is free
      */
     Object get(Term term);
+    String toShortString();
 }
