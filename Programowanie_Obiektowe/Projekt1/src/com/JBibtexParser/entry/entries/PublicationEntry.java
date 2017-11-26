@@ -1,18 +1,28 @@
 package com.JBibtexParser.entry.entries;
 
-import com.JBibtexParser.entry.defaultTypes.EntryFieldEnum;
-import com.JBibtexParser.entry.defaultTypes.EntryTypeEnum;
 import com.JBibtexParser.entry.IEntry;
+import types.IEntryField;
+import types.IEntryType;
 
 import java.util.Map;
 
 public class PublicationEntry implements IEntry {
 
-	private EntryTypeEnum entryType;
-	private Map<EntryFieldEnum, String> fields;
+	private IEntryType entryType;
 
-	public PublicationEntry(EntryTypeEnum entryTypeEnum) {
-		this.entryType=entryTypeEnum;
+	public String getEntryName() {
+		return entryName;
+	}
+
+	public void setEntryName(String entryName) {
+		this.entryName = entryName;
+	}
+
+	private String entryName;
+	private Map<IEntryField, String> fields;
+
+	public PublicationEntry(IEntryType entryType) {
+		this.entryType=entryType;
 	}
 
 	public boolean verifyCorrect() {
@@ -25,11 +35,19 @@ public class PublicationEntry implements IEntry {
 		throw new UnsupportedOperationException();
 	}
 
-	public Map<EntryFieldEnum, String> getFields() {
+	public Map<IEntryField, String> getFields() {
 		return fields;
 	}
 
-	public void setFields(Map<EntryFieldEnum, String> fields) {
+	public void setFields(Map<IEntryField, String> fields) {
 		this.fields = fields;
+	}
+
+	public IEntryType getEntryType() {
+		return entryType;
+	}
+
+	public void setEntryType(IEntryType entryType) {
+		this.entryType = entryType;
 	}
 }

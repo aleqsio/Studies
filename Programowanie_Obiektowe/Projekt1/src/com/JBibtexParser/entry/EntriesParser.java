@@ -1,10 +1,12 @@
 package com.JBibtexParser.entry;
 
 import com.JBibtexParser.bibliography.IBibliographyManager;
-import com.JBibtexParser.bibliography.KeywordBibliographyManager;
 import com.JBibtexParser.entry.entries.CommentEntry;
 import com.JBibtexParser.entry.entries.StringEntry;
+import types.IEntryTypes;
 import com.JBibtexParser.util.ParseErrorException;
+import types.Verification;
+import types.definition.IDefinition;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +26,9 @@ private EntryFactory entryFactory;
 		throw new UnsupportedOperationException();
 	}
 
-	public EntriesParser(IBibliographyManager bibliograpyManager) {
+	public EntriesParser(IBibliographyManager bibliograpyManager, IEntryTypes publicationEntryTypes, Verification verificationType, IDefinition verificationDefinition) {
 		this.bibliographyManager=bibliograpyManager;
-		entryFactory=new EntryFactory(stringEntries,commmentEntries);
+		entryFactory=new EntryFactory(stringEntries,commmentEntries,publicationEntryTypes,verificationType,verificationDefinition);
 	}
 
 	public void parseBlock(String textblock) throws ParseErrorException {
