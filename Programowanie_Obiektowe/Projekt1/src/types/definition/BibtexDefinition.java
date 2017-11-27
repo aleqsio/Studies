@@ -65,7 +65,6 @@ public class BibtexDefinition implements IDefinition{
         fields=build("address",address,"annote",annote,"author",author,"booktitle",booktitle,"chapter",chapter,"crossref",crossref,"edition",edition,"editor",editor,"howpublished",howpublished,"institution",institution,"journal",journal,"key",key,"month",month,"note",note,"number",number,"organization",organization,"pages",pages,"publisher",publisher,"school",school,"series",series,"title",title,"type",type,"volume",volume,"year",year);
         types = build("article",article,"book",book,"booklet",booklet,"conference",conference,"inbook",inbook,"incollection",incollection,"inproceedings",inproceedings,"manual",manual,"mastersthesis",mastersthesis,"misc",misc,"phdthesis",phdthesis,"proceedings",proceedings,"techreport",techreport,"unpublished",unpublished);
         definition.put(article,build(author,r,title,r,journal,r,year,r,volume,o,number,o,pages,o,month,o,note,o));
-
     }
 
     @Override
@@ -73,30 +72,6 @@ public class BibtexDefinition implements IDefinition{
         return definition;
     }
 
-
-    private static <T1,T2> HashMap<T1, T2> build(Object... data){
-        HashMap<T1, T2> result = new HashMap<>();
-
-        if(data.length % 2 != 0)
-            throw new IllegalArgumentException("Odd number of arguments");
-
-        T1 key = null;
-        Integer step = -1;
-
-        for(Object value : data){
-            step++;
-            switch(step % 2){
-                case 0:
-                    key = (T1) value;
-                    continue;
-                case 1:
-                    result.put(key, (T2) value);
-                    break;
-            }
-        }
-
-        return result;
-    }
 
     public Map<String, EntryField> getFields() {
         return fields;
