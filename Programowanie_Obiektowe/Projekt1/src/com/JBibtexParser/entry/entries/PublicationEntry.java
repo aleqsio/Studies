@@ -1,10 +1,12 @@
 package com.JBibtexParser.entry.entries;
 
 import com.JBibtexParser.entry.IEntry;
-import types.IEntryField;
-import types.IEntryType;
+import com.JBibtexParser.typemanager.IEntryField;
+import com.JBibtexParser.typemanager.IEntryType;
 
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PublicationEntry implements IEntry {
 
@@ -19,7 +21,7 @@ public class PublicationEntry implements IEntry {
 	}
 
 	private String entryName;
-	private Map<IEntryField, String> fields;
+	private Map<IEntryField, List<String>> fields;
 
 	public PublicationEntry(IEntryType entryType) {
 		this.entryType=entryType;
@@ -35,11 +37,11 @@ public class PublicationEntry implements IEntry {
 		throw new UnsupportedOperationException();
 	}
 
-	public Map<IEntryField, String> getFields() {
+	public Map<IEntryField, List<String>> getFields() {
 		return fields;
 	}
 
-	public void setFields(Map<IEntryField, String> fields) {
+	public void setFields(Map<IEntryField, List<String>> fields) {
 		this.fields = fields;
 	}
 
@@ -49,5 +51,12 @@ public class PublicationEntry implements IEntry {
 
 	public void setEntryType(IEntryType entryType) {
 		this.entryType = entryType;
+	}
+	public String getName(){
+		return this.getEntryType().getName()+" "+this.getEntryName();
+	}
+	@Override
+	public String toString() {
+		return 	entryType.getName() +" " + entryName+fields.keySet().stream().map(p->p.getName()+":"+fields.get(p).toString()).collect(Collectors.joining("\n"));
 	}
 }

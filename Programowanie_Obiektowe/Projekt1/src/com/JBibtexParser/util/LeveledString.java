@@ -1,9 +1,13 @@
 package com.JBibtexParser.util;
 
+import com.JBibtexParser.util.exceptions.ParseErrorException;
 import javafx.util.Pair;
 
 import java.util.*;
 import java.util.function.IntBinaryOperator;
+import java.util.stream.Collectors;
+
+import static java.util.Arrays.copyOfRange;
 
 /**
  * Created by Aleksander on 24.11.2017.
@@ -83,9 +87,19 @@ public class LeveledString {
         } catch (ParseErrorException e) {
             return new LeveledString(newEntry, new int[newEntry.length()]);
         }
-
     }
-
+    public LeveledString substituteUnascaped(String find, String replace) {
+        String newEntry = entry;
+        List<Integer> positions = findAllOccurences(entry, find).stream().filter(p -> p.equals(0) || entry.charAt(p-1)!='\\').collect(Collectors.toList());
+        for (Integer position : positions) {
+            newEntry = newEntry.substring(0, position) + replace + newEntry.substring(position + find.length(), newEntry.length());
+        }
+        try {
+            return new LeveledString(newEntry);
+        } catch (ParseErrorException e) {
+            return new LeveledString(newEntry, new int[newEntry.length()]);
+        }
+    }
     private List<Integer> findAllOccurences(String string, String pattern) {
         int lastIndex = 0;
         List<Integer> result = new ArrayList<Integer>();
@@ -172,5 +186,17 @@ public class LeveledString {
         if (!foundName)
             pairs.add(new Pair<LeveledString, LeveledString>(new LeveledString("parser_entryname"), new LeveledString("")));
         return pairs;
+    }
+
+    public int length() {
+        return entry.length();
+    }
+    public LeveledString trim(){
+        String entry=this.entry;
+        entry=entry.trim();
+        int pos = this.entry.indexOf(entry);
+        int[] levels = new int[entry.length()];
+        levels=copyOfRange(this.levels,pos,entry.length()+1);
+        return new LeveledString(entry,levels);
     }
 }

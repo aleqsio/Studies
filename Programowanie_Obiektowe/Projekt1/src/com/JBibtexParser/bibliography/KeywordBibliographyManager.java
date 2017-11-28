@@ -1,19 +1,19 @@
 package com.JBibtexParser.bibliography;
 
+import com.JBibtexParser.entry.IEntry;
 import com.JBibtexParser.entry.entries.PublicationEntry;
 import java.util.Map;
 
 public class KeywordBibliographyManager implements IBibliographyManager{
 
 	private Map<String, PublicationEntry> keywords;
-	private Bibliography mainBibliography;
+	private Bibliography mainBibliography = new Bibliography();
 
-	/**
-	 * 
-	 * @param PublicationEntry
-	 */
-	public void add(int PublicationEntry) {
 
+	@Override
+	public void add(PublicationEntry publicationEntry) {
+		mainBibliography.add(publicationEntry);
+		addKeywords(publicationEntry);
 	}
 
 	public Bibliography filterByField() {
@@ -25,13 +25,14 @@ public class KeywordBibliographyManager implements IBibliographyManager{
 		return new Bibliography();
 	}
 
-	/**
-	 * 
-	 * @param PublicationEntry
-	 */
-	private void addKeywords(int PublicationEntry) {
+	@Override
+	public Bibliography getBibliography() {
+		return mainBibliography;
+	}
+
+	private void addKeywords(PublicationEntry PublicationEntry) {
 		// TODO - implement com.JBibtexParser.bibliography.KeywordBibliographyManager.addKeywords
-		throw new UnsupportedOperationException();
+
 	}
 
 }

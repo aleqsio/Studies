@@ -255,22 +255,6 @@ volume = {37},
 year = {1972},
 },
 
-@incollection{ErSh:21,
-author = {Erdos, Paul and Shelah, Saharon},
-
-booktitle = {Graph theory and applications (Proc. Conf., Western
- Michigan Univ., Kalamazoo, Mich., 1972; dedicated to the memory of J.
- W. T. Youngs)},
-
-
-pages = {75--79},
-publisher = {Springer, Berlin},
-series = {Lecture Notes in Mathematics},
-title = {{On problems of Moser and Hanson}},
-volume = {303},
-year = {1972},
-},
-
 @article{Sh:22,
 author = {Shelah, Saharon},
 
@@ -359,55 +343,13 @@ volume = {16},
 year = {1974},
 },
 
-@incollection{MzSh:30,
-author = {McKenzie, Ralph and Shelah, Saharon},
-booktitle = {Proceedings of the Tarski Symposium (Univ. California,
- 	Berkeley, Calif., 1971)},
-
-
-pages = {53--74},
-publisher = {Amer. Math. Soc., Providence, R.I},
-series = {Proc. Sympos. Pure Math.},
-title = {{The cardinals of simple models for universal theories}},
-volume = {XXV},
-year = {1974},
-},
-
-@incollection{Sh:31,
-author = {Shelah, Saharon},
-booktitle = {Proceedings of the Tarski Symposium (Univ. of California,
- Berkeley, Calif., 1971)},
-
-
-pages = {187--203},
-publisher = {Amer. Math. Soc., Providence, R.I},
-series = {Proc. Sympos. Pure Math.},
-title = {{Categoricity of uncountable theories}},
-volume = {XXV},
-year = {1974},
-},
-
-@incollection{EHSh:32,
-author = {Erdos, Paul and Hajnal, Andras and Shelah, Saharon},
-
-booktitle = {Topics in topology (Proc. Colloq., Keszthely, 1972)},
-
-
-pages = {243--255},
-publisher = {North-Holland, Amsterdam},
-series = {Colloq. Math. Soc. Janos Bolyai},
-title = {{On some general properties of chromatic numbers}},
-volume = {8},
-year = {1974},
-},
-
 @article{Sh:33,
 author = {Shelah, Saharon},
 
 journal = {Pacific Journal of Mathematics},
 
 pages = {163--168},
-title = {{The Hanf number of omitting complete types}},
+title = {{The Hanf number of omitting complete com.JBibtexParser.typemanager}},
 volume = {50},
 year = {1974},
 },
@@ -759,6 +701,7 @@ year = {1976},
 
 @article{MwSh:62,
 author = {Makowsky, Johann A. and Shelah, Saharon},
+author = {Makowsky2, Johann A. and Shelah, Saharon},
 
 journal = {Transactions of the American Mathematical Society},
 

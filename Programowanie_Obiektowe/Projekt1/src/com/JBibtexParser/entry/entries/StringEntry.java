@@ -28,4 +28,14 @@ public class StringEntry implements IEntry {
 	public void setReplacementText(String replacementText) {
 		this.replacementText = replacementText;
 	}
+
+	@Override
+	public String toString() {
+		return "String substitution: " +	sourceText +" -> " + replacementText;
+	}
+
+	@Override
+	public String getName() {
+		return toString();
+	}
 }
