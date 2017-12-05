@@ -1,11 +1,6 @@
-import com.JBibtexParser.Parser;
-import com.JBibtexParser.bibliography.Bibliography;
-import com.JBibtexParser.bibliography.IBibliographyManager;
-import com.JBibtexParser.typemanager.IEntryTypesManager;
-import com.JBibtexParser.typemanager.definitions.BibtexDefinition;
-import com.JBibtexParser.util.exceptions.ParseErrorException;
-import com.JBibtexParser.verification.SimpleVerifier;
-import com.JBibtexParser.verification.VerificationMode;
+import JBibtexParser.bibliography.IBibliographyManager;
+import JBibtexParser.typemanager.definitions.BibtexDefinition;
+import JBibtexParser.util.exceptions.ParseErrorException;
 import org.apache.commons.cli.*;
 
 import java.util.Arrays;
@@ -35,13 +30,17 @@ public class Main {
         verifier.verifyBibliography(mainBibliography);
 
         System.out.println(verifier.getVerificationReport().toString());
+        IBibliographyManager mathematics = bibliographyManager.findEntriesContainingWords("mathematics");
+        System.out.println(mathematics.getBibliography().toString());
+        System.out.print("###"+bibliographyManager.findEntriesContainingWords("mathematics").findEntriesContainingWords("theories")
+                .getBibliography().toString());
 
         if(cmd.hasOption("categories")){
             for (IEntryTypesManager.IEntryType type : Arrays.stream(cmd.getOptionValue("categories").split(",")).map(p->parser.getEntryTypesManager().getType(p.trim())).collect(Collectors.toList())){
                 printLine(delimiter);
                 System.out.println("All entries of category "+type.getName());
                 printLine(delimiter);
-                System.out.println(bibliographyManager.filterByType(type).getBibliography().toString());
+            //    System.out.println(bibliographyManager.filterByType(type).getBibliography().toString());
                 printLine(delimiter);
             }
             ;

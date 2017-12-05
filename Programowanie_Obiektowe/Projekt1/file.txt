@@ -255,8 +255,10 @@ volume = {37},
 year = {1972},
 },
 
+TODO:TUTAJ można zmienić
+
 @incollection{ErSh:21,
-author = {Sarah, Julien and Shelah, Saharon},
+author = {Julien Sarah and Shelah, Saharon},
 
 booktitle = {Graph theory and applications (Proc. Conf., Western
  Michigan Univ., Kalamazoo, Mich., 1972; dedicated to the memory of J.
@@ -770,7 +772,7 @@ year = {1979},
 },
 
 @article{SeSh:63,
-author = {Stern, Jacques and Shelah, Saharon},
+author = {Jacques,Stern and Shelah, Saharon},
 
 
 journal = {Transactions of the American Mathematical Society},
@@ -795,10 +797,10 @@ year = {1977},
 @article{DvSh:65,
 author = {Devlin, Keith J. and Shelah, Saharon},
 
-journal = {Israel Journal of Mathematics},
+journal = {Israel Journal of Mathematics },
 
 pages = {239--247},
-title = {{A weak version of $\diamondsuit $ which follows from
+title = {{A weak version of $\diamondsuit $ theories which follows from
  $2^{\aleph _{0}}<2^{\aleph _{1}}$}},
 volume = {29},
 year = {1978},

@@ -29,9 +29,3 @@
         YEAR = 2005,
         }
 
-        @article{mrx05,
-          auTHor = mockAuthor,
-          Title = mockTitle,
-          publisher = mockPublisher,
-          YEAR = 2000
-          }
