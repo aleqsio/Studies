@@ -2,8 +2,7 @@ package com.JBibtexParser.typemanager.definitions;
 
 import com.JBibtexParser.typemanager.EntryField;
 import com.JBibtexParser.typemanager.EntryType;
-import com.JBibtexParser.typemanager.IEntryField;
-import com.JBibtexParser.typemanager.IEntryType;
+import com.JBibtexParser.typemanager.IEntryTypesManager;
 
 import java.util.*;
 
@@ -11,7 +10,7 @@ import java.util.*;
  * Created by Aleksander on 25.11.2017.
  */
 public interface IDefinition {
-    Map<IEntryType, Map<IEntryField, FieldProperties>> getDefinition();
+    Map<IEntryTypesManager.IEntryType, Map<IEntryTypesManager.IEntryField, FieldProperties>> getDefinition();
     Set<EntryField> getFields();
     Set<EntryType> getTypes();
 

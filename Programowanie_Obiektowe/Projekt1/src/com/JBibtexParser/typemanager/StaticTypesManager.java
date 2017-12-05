@@ -33,6 +33,10 @@ public class StaticTypesManager implements IEntryTypesManager {
     public List<EntryType> getAllTypes() {
         return new ArrayList<>(types.values());
     }
+    @Override
+    public List<EntryField> getAllFields() {
+        return new ArrayList<>(fields.values());
+    }
 
     @Override
     public EntryField getField(String name) {

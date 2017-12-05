@@ -3,7 +3,7 @@ package com.JBibtexParser.typemanager;
 /**
  * Created by Aleksander on 25.11.2017.
  */
-public class EntryField implements IEntryField {
+public class EntryField implements IEntryTypesManager.IEntryField {
     String name;
 
     public EntryField(String name) {

@@ -12,6 +12,7 @@ public interface IEntryTypesManager {
 
     List<EntryType> getAllTypes();
 
+    List<EntryField> getAllFields();
     EntryField getField(String name);
 
     boolean hasField(String name);
@@ -21,6 +22,10 @@ public interface IEntryTypesManager {
         boolean equals(Object other);
         int hashCode();
     }
-    
+    public interface IEntryType {
+        String getName();
+        boolean equals(Object other);
+        int hashCode();
+    }
 }
 

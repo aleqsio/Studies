@@ -1,8 +1,7 @@
 package com.JBibtexParser.entry.entries;
 
 import com.JBibtexParser.entry.IEntry;
-import com.JBibtexParser.typemanager.IEntryField;
-import com.JBibtexParser.typemanager.IEntryType;
+import com.JBibtexParser.typemanager.IEntryTypesManager;
 
 import java.util.List;
 import java.util.Map;
@@ -10,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class PublicationEntry implements IEntry {
 
-	private IEntryType entryType;
+	private IEntryTypesManager.IEntryType entryType;
 
 	public String getEntryName() {
 		return entryName;
@@ -21,10 +20,10 @@ public class PublicationEntry implements IEntry {
 	}
 
 	private String entryName;
-	private Map<IEntryField, List<String>> fields;
+	private Map<IEntryTypesManager.IEntryField, List<String>> fields;
 
-	public PublicationEntry(IEntryType entryType) {
-		this.entryType=entryType;
+	public PublicationEntry(IEntryTypesManager.IEntryType entryType) {
+		this.entryType = entryType;
 	}
 
 	public boolean verifyCorrect() {
@@ -33,30 +32,53 @@ public class PublicationEntry implements IEntry {
 	}
 
 	public void print() {
-		// TODO - implement com.JBibtexParser.entry.entries.PublicationEntry.print
+		// TODO - implement com.JBibtexParser.entry.entries.PublicationEntry.toString
 		throw new UnsupportedOperationException();
 	}
 
-	public Map<IEntryField, List<String>> getFields() {
+	public Map<IEntryTypesManager.IEntryField, List<String>> getFields() {
 		return fields;
 	}
 
-	public void setFields(Map<IEntryField, List<String>> fields) {
+	public void setFields(Map<IEntryTypesManager.IEntryField, List<String>> fields) {
 		this.fields = fields;
 	}
 
-	public IEntryType getEntryType() {
+	public IEntryTypesManager.IEntryType getEntryType() {
 		return entryType;
 	}
 
-	public void setEntryType(IEntryType entryType) {
+	public void setEntryType(IEntryTypesManager.IEntryType entryType) {
 		this.entryType = entryType;
 	}
-	public String getName(){
-		return this.getEntryType().getName()+" "+this.getEntryName();
+
+	public String getName() {
+		return this.getEntryType().getName() + " " + this.getEntryName();
 	}
+
 	@Override
 	public String toString() {
-		return 	entryType.getName() +" " + entryName+fields.keySet().stream().map(p->p.getName()+":"+fields.get(p).toString()).collect(Collectors.joining("\n"));
+		return entryType.getName() + " " + entryName+"\n" + fields.keySet().stream().map(p -> 	"\t"+p.getName() + ":" +
+				"\t"+((fields.get(p).size() == 1) ? fields.get(p).get(0) :"•"+fields.get(p).stream().collect(Collectors.joining("\n\t\t\t•")))).collect(Collectors.joining("\n"));
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		PublicationEntry that = (PublicationEntry) o;
+
+		if (entryType != null ? !entryType.equals(that.entryType) : that.entryType != null) return false;
+		if (entryName != null ? !entryName.equals(that.entryName) : that.entryName != null) return false;
+		return fields != null ? fields.equals(that.fields) : that.fields == null;
+	}
+
+	@Override
+	public int hashCode() {
+		int result = entryType != null ? entryType.hashCode() : 0;
+		result = 31 * result + (entryName != null ? entryName.hashCode() : 0);
+		result = 31 * result + (fields != null ? fields.hashCode() : 0);
+		return result;
 	}
 }

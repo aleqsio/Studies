@@ -1,6 +1,6 @@
 package com.JBibtexParser.typemanager;
 
-public class EntryType implements IEntryType {
+public class EntryType implements IEntryTypesManager.IEntryType {
     String name;
 
     public EntryType(String name) {

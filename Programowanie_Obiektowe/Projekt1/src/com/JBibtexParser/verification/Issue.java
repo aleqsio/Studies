@@ -1,7 +1,7 @@
 package com.JBibtexParser.verification;
 
 import com.JBibtexParser.entry.IEntry;
-import com.JBibtexParser.typemanager.IEntryField;
+import com.JBibtexParser.typemanager.IEntryTypesManager;
 
 /**
  * Created by Aleksander on 27.11.2017.
@@ -9,19 +9,19 @@ import com.JBibtexParser.typemanager.IEntryField;
 public class Issue {
     private String description;
     private IEntry entry;
-    private IEntryField field;
+    private IEntryTypesManager.IEntryField field;
 
-    public Issue(String description, IEntry entry, IEntryField field) {
+    public Issue(String description, IEntry entry, IEntryTypesManager.IEntryField field) {
         this.description = description;
         this.entry = entry;
         this.field = field;
     }
 
-    public IEntryField getField() {
+    public IEntryTypesManager.IEntryField getField() {
         return field;
     }
 
-    public void setField(IEntryField field) {
+    public void setField(IEntryTypesManager.IEntryField field) {
         this.field = field;
     }
 

@@ -256,7 +256,7 @@ year = {1972},
 },
 
 @incollection{ErSh:21,
-author = {Erdos, Paul and Shelah, Saharon},
+author = {Sarah, Julien and Shelah, Saharon},
 
 booktitle = {Graph theory and applications (Proc. Conf., Western
  Michigan Univ., Kalamazoo, Mich., 1972; dedicated to the memory of J.
@@ -1223,15 +1223,8 @@ year = {1979},
 @article{ShRd:97,
 author = {Shelah, Saharon and Rudin, M. E. },
 
-journal = {Topology Proceedings},
-
-
- Norman, Okla., 1978), I.},
-pages = {199--204},
-title = {{Unordered com.JBibtexParser.typemanager of ultrafilters}},
-volume = {3},
-year = {1979},
-},
+journal = {Topology Proceedings}
+}
 
 @article{Sh:98,
 author = {Shelah, Saharon},
@@ -4884,13 +4877,9 @@ title = {{On spectrum of $\kappa $-resplendent models}},
 
 @article{JuSh:364,
 author = {Juhasz, Istvan and Shelah, Saharon},
-
-
-
 journal = {Topology and its Applications},
-
-
- (Oxford, 1989).},
+}
+ @article{JuSss:3,
 pages = {203--208},
 title = {{On partitioning the triples of a topological space}},
 volume = {44},
@@ -13857,5 +13846,5 @@ author = {Shelah, Saharon},
 
 
 title = {{}},
-}
+},
 

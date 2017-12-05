@@ -4,8 +4,11 @@ import com.JBibtexParser.entry.entries.PublicationEntry;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Bibliography {
+
+	private List<PublicationEntry> entries =new LinkedList<>();
 
 	public Bibliography(List<PublicationEntry> entries) {
 		this.entries = entries;
@@ -18,17 +21,18 @@ public class Bibliography {
 		return entries;
 	}
 
+	public int size(){
+		return  entries.size();
+	}
 	public void setEntries(List<PublicationEntry> entries) {
 		this.entries = entries;
 	}
 
-	private List<PublicationEntry> entries =new LinkedList<>();
 	public void add(PublicationEntry e){
 		entries.add(e);
 	}
-	public void print() {
-		// TODO - implement com.JBibtexParser.bibliography.Bibliography.print
-		throw new UnsupportedOperationException();
+	public String toString() {
+		return entries.stream().map(e->e.toString()).collect(Collectors.joining("\n"));
 	}
 
 }

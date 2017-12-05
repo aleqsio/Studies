@@ -1,6 +1,8 @@
 package com.JBibtexParser.typemanager.definitions;
 
 import com.JBibtexParser.typemanager.*;
+import com.JBibtexParser.typemanager.IEntryTypesManager.IEntryField;
+import com.JBibtexParser.typemanager.IEntryTypesManager.IEntryType;
 
 import java.util.*;
 
@@ -68,7 +70,9 @@ public class BibtexDefinition implements IDefinition{
         definition.put(booklet,buildMap(title,r,author,o,howpublished,o,address,o,month,o,year,o,note,o));
         definition.put(inbook,buildMap(author,r,title,r,chapter,r,publisher,r,year,r,volume,o,series,o,type,o,address,o,edition,o,month,o,note,o));
         definition.put(incollection,buildMap(author,r,title,r,booktitle,r,publisher,r,year,r,volume,o,number,o,series,o,type,o,chapter,o,pages,o,address,o,edition,o,month,o,note,o));
-/*
+        definition.put(manual,buildMap(title,r,author,o,organization,o,address,o,edition,o,month,o,year,o,note,o));
+        definition.put(mastersthesis,buildMap(author,r,title,r,school,r,year,r,type,o,address,o,edition,o,month,o,year,o,note,o));
+        /* TODO: uzupełnić brakujące definicje
     Technical documentation. Required field: title. Optional fields: author, organization, address, edition, month, year, note.
 mastersthesis
     A Master's thesis. Required fields: author, title, school, year. Optional fields: type, address, month, note.

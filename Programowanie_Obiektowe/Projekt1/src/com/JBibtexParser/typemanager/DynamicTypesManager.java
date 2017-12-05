@@ -29,6 +29,12 @@ public class DynamicTypesManager implements IEntryTypesManager {
     }
 
     @Override
+    public List<EntryField> getAllFields() {
+        return new ArrayList<>(fields.values());
+    }
+
+
+    @Override
     public EntryField getField(String name) {
         if (!fields.containsKey(name.toLowerCase())) fields.put(name.toLowerCase(), new EntryField(name));
         return fields.get(name.toLowerCase());
